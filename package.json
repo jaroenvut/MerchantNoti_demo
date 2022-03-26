@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-merchantnoti-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "fs": "^0.0.1-security"
+  },
+  "engines" : {
+    "node" : "15.5.1",
+    "npm" : "7.3.0"
+}
+}
