@@ -2,6 +2,7 @@ const { request } = require('express')
 const express = require('express')
 const app = express()
 const fs = require("fs")
+const port = process.env.PORT || 3000
 
 app.use(express.json())
 app.post('/', (req, res) => {
@@ -9,7 +10,10 @@ app.post('/', (req, res) => {
     res.json({"status":{"code":"00000","message":"success","description":"Product has been checked out"},"data":{"notify_id":(notifyId)}})
 })
 
-const port = process.env.PORT || 3000
+app.get('/', (req, res) => {
+    res.json("Demo merchant noti on heroku free hosting")
+  })
+
   app.listen(port, () => {
     console.log('Server is running on '+`https://localhost:${port}`)
   })
