@@ -10,7 +10,8 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 app.post('/', (req, res) => {
     const notifyId = req.body.notify_id
-    const body_stringify = {"status":{"code":"11111","message":"success","description":"Product has been checked out"},"data":{"notify_id":(notifyId)}}
+    const body = {"status":{"code":"11111","message":"success","description":"Product has been checked out"},"data":{"notify_id":(notifyId)}}
+    const body_stringify = (JSON.stringify(body))
     const data_signature = (timestamp)+(body_stringify);
     //Signing with RSA-SHA256
     const signer = crypto.createSign('RSA-SHA256');
