@@ -9,6 +9,10 @@ app.post('/', (req, res) => {
     res.json({"status":{"code":"00000","message":"success","description":"Product has been checked out"},"data":{"notify_id":(notifyId)}})
 })
 
+app.get('/', (req, res) => {
+    res.json("Demo merchant noti on heroku free hosting")
+  })
+
 const port = process.env.PORT || 3000
   app.listen(port, () => {
     console.log('Server is running on '+`https://localhost:${port}`)
