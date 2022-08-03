@@ -1,9 +1,14 @@
+//Require function from npm.com
 const { request } = require('express')
 const express = require('express')
 const app = express()
 const fs = require("fs")
 const crypto = require("crypto")
+
+//Create timestamp in epoch format
 const timestamp = Math.floor(new Date().getTime() / 1000);
+
+// Used same private key of create order
 const private_key = fs.readFileSync('private.pem', 'utf-8');
 const port = process.env.PORT || 3000
 
