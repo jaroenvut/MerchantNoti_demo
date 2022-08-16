@@ -31,7 +31,7 @@ app.post('/', (req, res) => {
     res.header({
     'Content-type' : 'application/json',
     'timestamp' : (timestamp),
-    'content-signature' : (`digest-alg=RSA-SHA; key-id=KEY:RSA:rsf.org; data=${signature}`)
+    'Content-Signature' : (`digest-alg=RSA-SHA; key-id=KEY:RSA:rsf.org; data=${signature}`)
       })
       res.send(body_stringify)
 })
