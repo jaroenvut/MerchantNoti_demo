@@ -34,7 +34,7 @@ app.post('/', (req, res) => {
     'content-signature' : (`digest-alg=RSA-SHA; key-id=KEY:RSA:rsf.org; data=${signature}`)
       })
       //res.send(body_stringify)
-      res.status(400).json(body_stringify)
+      res.status(400).send(body_stringify)
 })
 
 app.get('/', (req, res) => {
