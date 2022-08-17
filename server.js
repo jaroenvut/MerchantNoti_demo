@@ -31,12 +31,13 @@ app.post('/', (req, res) => {
     res.header({
     'Content-type' : 'application/json',
     'timestamp' : (timestamp),
-    'Content-Signature' : (`digest-alg=RSA-SHA; key-id=KEY:RSA:rsf.org; data=${signature}`)
+    'content-signature' : (`digest-alg=RSA-SHA; key-id=KEY:RSA:rsf.org; data=${signature}`)
       })
       res.send(body_stringify)
 })
 
 app.get('/', (req, res) => {
+    res.status(400).send('Status: Bad Request')
     res.json("Demo merchant noti on heroku free hosting")
   })
 
