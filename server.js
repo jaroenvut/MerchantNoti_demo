@@ -37,8 +37,9 @@ app.post('/', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.status(400).send('Status: Bad Request')
-    res.json("Demo merchant noti on heroku free hosting")
+    //res.status(400).send('Status: Bad Request')
+    //res.json("Demo merchant noti on heroku free hosting")
+    res.status(400).send.json('test response')
   })
 
   app.listen(port, () => {
