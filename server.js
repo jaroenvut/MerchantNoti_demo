@@ -33,8 +33,8 @@ app.post('/', (req, res) => {
     'timestamp' : (timestamp),
     'content-signature' : (`digest-alg=RSA-SHA; key-id=KEY:RSA:rsf.org; data=${signature}`)
       })
-      //res.send(body_stringify)
-      res.status(200).send(body_stringify)
+    //res.send(body_stringify)
+    res.status(200).send(body_stringify)
 })
 
   app.listen(port, () => {
