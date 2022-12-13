@@ -33,7 +33,7 @@ app.post('/', (req, res) => {
     'timestamp' : (timestamp),
     'content-signature' : (`digest-alg=RSA-SHA; key-id=KEY:RSA:rsf.org; data=${signature}`)
       })
-    //res.send(body_stringify)
+    //response status 200=success, 400=auto refund, 404= auto refund
     res.status(200).send(body_stringify)
 })
 
